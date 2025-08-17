@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Club Performance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Annual Inter-Department Club Competition</h1>
+        <h2>Performance Tracker</h2>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <form id="performanceForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name:</label>
+                    <input type="text" id="teamName" required placeholder="Enter club name">
+                </div>
+
+                <div class="form-group">
+                    <label for="teamId">Team ID (PRN):</label>
+                    <input type="number" id="teamId" required placeholder="Enter PRN">
+                </div>
+
+                <div class="form-group">
+                    <label for="round1">Round 1 Score (0-100):</label>
+                    <input type="range" id="round1" min="0" max="100" value="50">
+                    <span id="round1Value">50</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="round2">Round 2 Score (0-100):</label>
+                    <input type="number" id="round2" min="0" max="100" value="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="round3Category">Round 3 Category:</label>
+                    <select id="round3Category" required>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">Calculate Performance</button>
+                <button type="button" id="resetBtn">Reset All</button>
+            </form>
+        </div>
+
+        <div class="results-section">
+            <h3>Performance Results</h3>
+            <div id="teamsContainer" class="teams-container">
+                <!-- Team cards will be added here dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by: Samyak Chanekar (PRN: 23070521125)</p>
+        <p id="datetime"></p>
+        <p>Fun fact about my teammate: He can solve a Rubik's cube in under 2 minutes!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
